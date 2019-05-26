@@ -45,8 +45,9 @@ eric@influx:~$ sudo cp influxdb_2.0.0-alpha.9_linux_amd64/{influx,influxd} /usr/
 6. Go back to you Influx 2.0 machine and go back into Settings -> Telegraf and click on your windows_perf file to open telegraf config.
 7. Copy and replace this information to your telegraf.conf file locally.
 8. Windows 10 kept giving me an issue with the [inputs.processes] part so I just commented that out.
+
+## Configuration for telegraf agent
 ```
-   # Configuration for telegraf agent
 [agent]
   ## Default data collection interval for all inputs
   interval = "10s"
