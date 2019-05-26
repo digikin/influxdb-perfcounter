@@ -116,7 +116,7 @@ eric@influx:~$ sudo cp influxdb_2.0.0-alpha.9_linux_amd64/{influx,influxd} /usr/
   urls = ["http://192.168.1.15:9999"]  <-- Your server URL will be different
 
   ## Token for authentication.
-  token = "$INFLUX_TOKEN"  <-- Influx token that we will have to set in powershell
+  token = "$INFLUX_TOKEN"  <-- Influx token that we replace with the one from InfluxDB settings
 
   ## Organization is the name of the organization you wish to write to; must exist.
   organization = "local"
@@ -147,8 +147,7 @@ eric@influx:~$ sudo cp influxdb_2.0.0-alpha.9_linux_amd64/{influx,influxd} /usr/
 ```
 
 ## Testing and config
-1. Once you save the file we are going to export the $INFLUX_TOKEN
-2. To test if telefraf can connect issue the command inside the folder telegraf is located: 
+1. To test if telefraf can connect issue the command inside the folder telegraf is located: 
 ```
 .\telegraf --config telegraf.conf --test
 ```
