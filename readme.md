@@ -38,10 +38,10 @@ eric@influx:~$ sudo cp influxdb_2.0.0-alpha.9_linux_amd64/{influx,influxd} /usr/
 
 ## Installing Telegraf on the Windows Machine
 1. Head over to https://portal.influxdata.com/downloads/ (Making this it was version 1.10.4)
-2. Open a administrator powershell prompt and make a directory (mkdir C:\users\{your_user}\telegraf)<br />
+2. Open a administrator powershell prompt and make a directory (mkdir C:\users\ {your_user} \telegraf)<br />
    **I had an issue downloading it with wget, so I just opened the download link in a browser and saved it to that folder**<br />
    **Enter the download link in a browser for the windows zip file https://dl.influxdata.com/telegraf/releases/telegraf-1.10.4_windows_amd64.zip**<br />
-3. Extract the files to you folder C:\users\{your_user}\telegraf
+3. Extract the files to you folder C:\users\ {your_user} \telegraf
 4. Change into the telegraf directory
 5. Issue the command <b>code telegraf.conf</b><br />
    **We are going delete what was written into this file because I kept getting 401 authorization issues with the api config call**<br />
