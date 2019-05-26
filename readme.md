@@ -233,4 +233,5 @@ PS C:\Users\digikin\telegraf\telegraf-1.10.4_windows_amd64\telegraf> .\telegraf 
 
 **There is more to come.  I have also added the docker plugin to the .conf file.**
 ## Dashboard preview with Docker plugin configured
-(/assets/images/Dashboard.PNG)
+![InfluxDB Dashboard](/assets/images/Dashboard.PNG "InfluxDB Dashboard with Docker plugin")
+
