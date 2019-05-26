@@ -45,8 +45,10 @@ eric@influx:~$ sudo cp influxdb_2.0.0-alpha.9_linux_amd64/{influx,influxd} /usr/
 4. Change into the telegraf directory
 5. Open the file in an editor<br />
    **We are going delete what was written into this file because I kept getting 401 authorization issues with the api config call**<br />
+![InfluxDB Dashboard](/assets/images/telegraf.PNG "Telegraf config")
 6. Go back to you Influx 2.0 machine and go back into Settings -> Telegraf and click on your windows_perf file to open telegraf config.
 7. Copy and replace this information to your telegraf.conf file locally.
+![InfluxDB Dashboard](/assets/images/telegraf_settings.PNG "Telegraf settings")
 8. Windows 10 kept giving me an issue with the [inputs.processes] part so I just commented that out.
 
 ## Configuration for telegraf.conf agent
@@ -145,7 +147,10 @@ eric@influx:~$ sudo cp influxdb_2.0.0-alpha.9_linux_amd64/{influx,influxd} /usr/
 
 ## Testing and config
 1. Once you save the file we are going to export the $INFLUX_TOKEN
-2. To test if telefraf can connect issue the command inside the foler telegraf is located: .\telegraf --config telegraf.conf --test<br />
+2. To test if telefraf can connect issue the command inside the folder telegraf is located: 
+```
+.\telegraf --config telegraf.conf --test
+```
 **If you get something like this in the terminal your config is recording data**
 ```
 2019-05-26T16:10:00Z I! Starting Telegraf 1.10.4
