@@ -198,7 +198,7 @@ eric@influx:~$ sudo cp influxdb_2.0.0-alpha.9_linux_amd64/{influx,influxd} /usr/
 > diskio,host=area51-pc,name=C: io_time=0i,iops_in_progress=0i,read_bytes=0i,read_time=0i,reads=0i,weighted_io_time=0i,write_bytes=0i,write_time=0i,writes=0i 1558887002000000000
 > diskio,host=area51-pc,name=D: io_time=0i,iops_in_progress=0i,read_bytes=0i,read_time=0i,reads=0i,weighted_io_time=0i,write_bytes=0i,write_time=0i,writes=0i 1558887002000000000
 ```
-##Issues with setting variable
+## Issues with setting variable
 1. Influx2.0 ask to set the variable by exporting it but powershell does not reckognize this command.
 2. Until I figure out how to pass this throug with powershell you will need to replace $INFLUX_TOKEN in the telegraf.conf file with yours from the influx UI.  
 3. You can find it by selecting the settings tab and clicking setup instructions.  You will only need what is after the equal sign.
