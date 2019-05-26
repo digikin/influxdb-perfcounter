@@ -43,7 +43,7 @@ eric@influx:~$ sudo cp influxdb_2.0.0-alpha.9_linux_amd64/{influx,influxd} /usr/
    **Enter the download link in a browser for the windows zip file https://dl.influxdata.com/telegraf/releases/telegraf-1.10.4_windows_amd64.zip**<br />
 3. Extract the files to you folder C:\users\ {your_user} \telegraf
 4. Change into the telegraf directory
-5. Issue the command <b>code telegraf.conf</b><br />
+5. Open the file in an editor<br />
    **We are going delete what was written into this file because I kept getting 401 authorization issues with the api config call**<br />
 6. Go back to you Influx 2.0 machine and go back into Settings -> Telegraf and click on your windows_perf file to open telegraf config.
 7. Copy and replace this information to your telegraf.conf file locally.
@@ -228,3 +228,6 @@ PS C:\Users\digikin\telegraf\telegraf-1.10.4_windows_amd64\telegraf> .\telegraf 
 ## Influx Dashboard
 1. Log back into your influxdb UI.
 2. Select the Dashboard tab and select system. 
+
+
+**There is more to come.  I have also added the docker plugin to the .conf file.**
