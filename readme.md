@@ -233,6 +233,4 @@ PS C:\Users\digikin\telegraf\telegraf-1.10.4_windows_amd64\telegraf> .\telegraf 
 
 **There is more to come.  I have also added the docker plugin to the .conf file.**
 ## Dashboard preview with Docker plugin configured
-![alt text][InfluxDB dashboard]
-
-[InfluxDB dashboard]: https://github/powershell-perfcounter/assets/images\Dashboard.PNG "InfluxDB Dashboard"
+[https://github/powershell-perfcounter/assets/images\Dashboard.PNG](https://github.com/digikin/powershell-perfcounter/blob/master/assets/images/Dashboard.PNG) "InfluxDB Dashboard"
