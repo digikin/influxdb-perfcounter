@@ -32,17 +32,17 @@ eric@influx:~$ sudo cp influxdb_2.0.0-alpha.9_linux_amd64/{influx,influxd} /usr/
 
 ## Installing Telegraf on the Windows Machine
 1. Head over to https://portal.influxdata.com/downloads/ (Making this it was version 1.10.4)
-2. Open a administrator powershell prompt and make a directory (mkdir C:\users\{your_user}\telegraf)
-   **I had an issue downloading it with wget, so I just opened the download link in a browser and saved it to that folder**
-   **Enter the download link in a browser for the windows zip file https://dl.influxdata.com/telegraf/releases/telegraf-1.10.4_windows_amd64.zip**
+2. Open a administrator powershell prompt and make a directory (mkdir C:\users\{your_user}\telegraf)<br />
+   **I had an issue downloading it with wget, so I just opened the download link in a browser and saved it to that folder**<br />
+   **Enter the download link in a browser for the windows zip file https://dl.influxdata.com/telegraf/releases/telegraf-1.10.4_windows_amd64.zip**<br />
 3. Extract the files to you folder C:\users\{your_user}\telegraf
 4. Change into the telegraf directory
-5. Issue the command <b>code telegraf.conf</b>
-   **We are going delete what was written into this file because I kept getting 401 authorization issues with the api config call**
+5. Issue the command <b>code telegraf.conf</b><br />
+   **We are going delete what was written into this file because I kept getting 401 authorization issues with the api config call**<br />
 6. Go back to you Influx 2.0 machine and go back into Settings -> Telegraf and click on your windows_perf file to open telegraf config.
 7. Copy and replace this information to your telegraf.conf file locally.
 8. Windows 10 kept giving me an issue with the [inputs.processes] part so I just commented that out.
-   <pre>
+   <code>
    # Configuration for telegraf agent
 [agent]
   ## Default data collection interval for all inputs
@@ -134,7 +134,7 @@ eric@influx:~$ sudo cp influxdb_2.0.0-alpha.9_linux_amd64/{influx,influxd} /usr/
 ##[[inputs.processes]]  <--Comment this out for now untill I figure out the issue.
 [[inputs.swap]]
 [[inputs.system]]
-</pre>
+</code>
 
 9. Once you save the file we are going to export the INFLUX
    
