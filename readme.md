@@ -1,5 +1,7 @@
 ## Powershell Data Diving with perf counters
 1. The perf_demo file shows the process of figuring out how to export system information with powershell.
+2. This is to figure out what is creating data and what type of information is being produced.
+3. You can take this data to configure the telegraf.conf inputs for each server/pc
 
 ## Influx 2.0 setup with UI
 1. Visit https://v2.docs.influxdata.com/v2.0/get-started/
@@ -30,8 +32,9 @@ eric@influx:~$ sudo cp influxdb_2.0.0-alpha.9_linux_amd64/{influx,influxd} /usr/
 1. Run the command <b>influxd</b>
 2. Visit http://{serverIP}:9999
 3. Enter user name, password, organization and name the bucket <b>InfluxDB</b>
-4. Ok now we have the database up now the best part of InfluxDB 2.0. Click the Advanced tab and create a telegraf config. 
-5. Select system and name it <b>windows_perf</b>
+4. Ok now we have the database up now. Click the Advanced tab and create a telegraf config in InfluxDB 2.0. 
+5. Select <b>system<b> and name it <b>windows_perf</b>
+6. We are going to come back to this but for now lets get telegraf installed locally on our Windows server/pc
 
 ## Installing Telegraf on the Windows Machine
 1. Head over to https://portal.influxdata.com/downloads/ (Making this it was version 1.10.4)
@@ -135,7 +138,7 @@ eric@influx:~$ sudo cp influxdb_2.0.0-alpha.9_linux_amd64/{influx,influxd} /usr/
 [[inputs.diskio]]
 [[inputs.mem]]
 [[inputs.net]]
-##[[inputs.processes]]  <--Comment this out for now untill I figure out the issue.
+##[[inputs.processes]]  <--Comment this out for now until I figure out the issue.
 [[inputs.swap]]
 [[inputs.system]]
 ```
@@ -200,8 +203,8 @@ eric@influx:~$ sudo cp influxdb_2.0.0-alpha.9_linux_amd64/{influx,influxd} /usr/
 ```
 
 ## Issues with setting variable
-1. Influx2.0 ask to set the variable by exporting it but powershell does not reckognize this command.
-2. Until I figure out how to pass this throug with powershell you will need to replace $INFLUX_TOKEN in the telegraf.conf file with yours from the influx UI.  
+1. Influx2.0 asks to set the variable by exporting it but powershell does not recognize this command.
+2. Until I figure out how to pass this through with powershell you will need to replace $INFLUX_TOKEN in the telegraf.conf file with yours from the influx UI.  
 3. You can find it by selecting the settings tab and clicking setup instructions.  You will only need what is after the equal sign.
 4. Replace the token, save the file and issue the command: .\telegraf --config telegraf.conf
    
@@ -220,4 +223,8 @@ PS C:\Users\digikin\telegraf\telegraf-1.10.4_windows_amd64\telegraf> .\telegraf 
 2019-05-26T17:23:13Z E! [inputs.cpu]: Error in plugin: error getting CPU info: context deadline exceeded
 2019-05-26T17:33:32Z E! [outputs.influxdb_v2] when writing to [http://192.168.1.15:9999]: Post http://192.168.1.15:9999/
 ```
-**Again I am still trying to work out issues with the data collection with telegraf**
+**Again I am still trying to work out issues with the data collection with telegraf so it is reporting errors**
+
+## Influx Dashboard
+1. Log back into your influxdb UI.
+2. Select the Dashboard tab and select system. 
