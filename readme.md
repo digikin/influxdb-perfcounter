@@ -223,7 +223,7 @@ PS C:\Users\digikin\telegraf\telegraf-1.10.4_windows_amd64\telegraf> .\telegraf 
 2019-05-26T17:23:13Z E! [inputs.cpu]: Error in plugin: error getting CPU info: context deadline exceeded
 2019-05-26T17:33:32Z E! [outputs.influxdb_v2] when writing to [http://192.168.1.15:9999]: Post http://192.168.1.15:9999/
 ```
-**Again I am still trying to work out issues with the data collection with telegraf so it is reporting errors**
+**Again I am still trying to work out issues with the data collection with telegraf so it is reporting errors for now**
 
 ## Influx Dashboard
 1. Log back into your influxdb UI.
