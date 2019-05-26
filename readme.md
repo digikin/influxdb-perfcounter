@@ -44,12 +44,13 @@ eric@influx:~$ sudo cp influxdb_2.0.0-alpha.9_linux_amd64/{influx,influxd} /usr/
 3. Extract the files to you folder C:\users\ {your_user} \telegraf
 4. Change into the telegraf directory
 5. Open the file in an editor<br />
-   **We are going delete what was written into this file because I kept getting 401 authorization issues with the api config call**<br />
+   **Delete what was written into this file because I kept getting 401 authorization issues with a api config call**<br />
 ![InfluxDB Dashboard](/assets/images/telegraf.PNG "Telegraf config")
 ![InfluxDB Dashboard](/assets/images/telegraf_settings.PNG "Telegraf settings")
 6. Go back to you Influx 2.0 machine and go back into Settings -> Telegraf and click on your windows_perf file to open telegraf config.
 7. Copy and replace this information to your telegraf.conf file locally.
 8. Windows 10 kept giving me an issue with the [inputs.processes] part so I just commented that out.
+9. I have included a copy of my telegraf.conf file but you must change the server URL.
 
 ## Configuration for telegraf.conf agent
 ```
