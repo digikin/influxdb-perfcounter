@@ -2,7 +2,7 @@
 1. Visit https://v2.docs.influxdata.com/v2.0/get-started/
 2. Download and install Influx 2.0 (My setup not running influx locally but rather on a Ubuntu VM)
 
-<pre>
+```
 eric@influx:~$ wget https://dl.influxdata.com/influxdb/releases/influxdb_2.0.0-alpha.9_linux_amd64.tar.gz
 --2019-05-26 14:44:41--  https://dl.influxdata.com/influxdb/releases/influxdb_2.0.0-alpha.9_linux_amd64.tar.gz
 Resolving dl.influxdata.com (dl.influxdata.com)... 13.35.115.123, 13.35.115.21, 13.35.115.13, ...
@@ -21,7 +21,7 @@ influxdb_2.0.0-alpha.9_linux_amd64/README.md
 influxdb_2.0.0-alpha.9_linux_amd64/influx
 influxdb_2.0.0-alpha.9_linux_amd64/influxd
 eric@influx:~$ sudo cp influxdb_2.0.0-alpha.9_linux_amd64/{influx,influxd} /usr/local/bin/
-</pre>
+```
 
 ## Start Influx 2.0
 1. Run the command <b>influxd</b>
@@ -42,7 +42,7 @@ eric@influx:~$ sudo cp influxdb_2.0.0-alpha.9_linux_amd64/{influx,influxd} /usr/
 6. Go back to you Influx 2.0 machine and go back into Settings -> Telegraf and click on your windows_perf file to open telegraf config.
 7. Copy and replace this information to your telegraf.conf file locally.
 8. Windows 10 kept giving me an issue with the [inputs.processes] part so I just commented that out.
-   <code>
+ ```
    # Configuration for telegraf agent
 [agent]
   ## Default data collection interval for all inputs
@@ -134,7 +134,7 @@ eric@influx:~$ sudo cp influxdb_2.0.0-alpha.9_linux_amd64/{influx,influxd} /usr/
 ##[[inputs.processes]]  <--Comment this out for now untill I figure out the issue.
 [[inputs.swap]]
 [[inputs.system]]
-</code>
+```
 
-9. Once you save the file we are going to export the INFLUX
+1. Once you save the file we are going to export the INFLUX
    
