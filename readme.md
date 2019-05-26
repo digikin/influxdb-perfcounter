@@ -46,7 +46,7 @@ eric@influx:~$ sudo cp influxdb_2.0.0-alpha.9_linux_amd64/{influx,influxd} /usr/
 7. Copy and replace this information to your telegraf.conf file locally.
 8. Windows 10 kept giving me an issue with the [inputs.processes] part so I just commented that out.
 
-## Configuration for telegraf agent
+## Configuration for telegraf.conf agent
 ```
 [agent]
   ## Default data collection interval for all inputs
@@ -142,7 +142,7 @@ eric@influx:~$ sudo cp influxdb_2.0.0-alpha.9_linux_amd64/{influx,influxd} /usr/
 
 ## Testing and config
 1. Once you save the file we are going to export the $INFLUX_TOKEN
-2. To test if telefraf can connect issue the command inside the foler telegraf is located: .\telegraf --config telegraf.conf --test
+2. To test if telefraf can connect issue the command inside the foler telegraf is located: .\telegraf --config telegraf.conf --test<br />
 **If you get something like this in the terminal your config is recording data**
 ```
 2019-05-26T16:10:00Z I! Starting Telegraf 1.10.4
@@ -198,11 +198,13 @@ eric@influx:~$ sudo cp influxdb_2.0.0-alpha.9_linux_amd64/{influx,influxd} /usr/
 > diskio,host=area51-pc,name=C: io_time=0i,iops_in_progress=0i,read_bytes=0i,read_time=0i,reads=0i,weighted_io_time=0i,write_bytes=0i,write_time=0i,writes=0i 1558887002000000000
 > diskio,host=area51-pc,name=D: io_time=0i,iops_in_progress=0i,read_bytes=0i,read_time=0i,reads=0i,weighted_io_time=0i,write_bytes=0i,write_time=0i,writes=0i 1558887002000000000
 ```
+
 ## Issues with setting variable
 1. Influx2.0 ask to set the variable by exporting it but powershell does not reckognize this command.
 2. Until I figure out how to pass this throug with powershell you will need to replace $INFLUX_TOKEN in the telegraf.conf file with yours from the influx UI.  
 3. You can find it by selecting the settings tab and clicking setup instructions.  You will only need what is after the equal sign.
 4. Replace the token, save the file and issue the command: .\telegraf --config telegraf.conf
+   
 ```
 PS C:\Users\digikin\telegraf\telegraf-1.10.4_windows_amd64\telegraf> .\telegraf --config telegraf.conf
 2019-05-26T17:04:56Z I! Starting Telegraf 1.10.4
