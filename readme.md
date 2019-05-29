@@ -33,8 +33,8 @@ eric@influx:~$ sudo cp influxdb_2.0.0-alpha.9_linux_amd64/{influx,influxd} /usr/
 2. Visit http://{serverIP}:9999
 3. Enter user name, password, organization and name the bucket <b>InfluxDB</b>
 4. Ok now we have the database up now. Click the Advanced tab and create a telegraf config in InfluxDB 2.0. 
-5. Select <b>system<b> and name it <b>windows_perf</b>
-6. We are going to come back to this but for now lets get telegraf installed locally on our Windows server/pc
+5. Select <b>system</b> and name it <b>windows_perf</b>
+6. We are going to come back to this but for now lets get telegraf installed locally on our Windows server or pc
 
 ## Installing Telegraf on the Windows Machine
 1. Head over to https://portal.influxdata.com/downloads/ (Making this it was version 1.10.4)
